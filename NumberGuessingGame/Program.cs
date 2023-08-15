@@ -12,6 +12,7 @@
             int sayi = rastgele.Next(1, 10);
 
             int tahmin = 0;
+            int deneme = 1;
 
             while (sayi != tahmin)
             {
@@ -31,7 +32,18 @@
                 }
 
                 Console.WriteLine("Tahmininiz: " + tahminEdilenSayi);
-
+ 
+                if (sayi.ToString() == tahminEdilenSayi)
+                {
+                    //Console.WriteLine("Doğru " + deneme + ".tahminde bildiniz. Tebrikler!");  
+                    Console.WriteLine($"Doğru {deneme}.tahminde bildiniz. Tebrikler!");   
+                    break; 
+                }
+                else
+                {
+                    Console.WriteLine("Yanlış tahmin. Üzgünüm.");
+                    deneme++;
+                }
             }
         }
     }
